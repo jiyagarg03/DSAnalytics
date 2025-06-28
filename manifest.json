@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "DSA Progress Tracker",
+  "version": "1.0.0",
+  "description": "Track your Data Structures & Algorithms progress across multiple coding platforms",
+  "permissions": ["storage", "activeTab", "tabs"],
+  "host_permissions": [
+    "https://leetcode.com/*",
+    "https://www.geeksforgeeks.org/*",
+    "https://codeforces.com/*",
+    "https://www.naukri.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "DSA Progress Tracker"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.geeksforgeeks.org/user/*",
+        "https://www.naukri.com/code360/profile/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["dashboard.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
