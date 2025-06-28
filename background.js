@@ -109,12 +109,6 @@ async function fetchLeetCodeStats(profileUrl) {
       throw new Error("User not found on LeetCode");
     }
 
-    // Get the actual count of unique problems solved (not submissions)
-    // let totalSolved = 0;
-    // if (user.submitStatsGlobal?.acSubmissionNum) {
-    //     totalSolved = user.submitStatsGlobal.acSubmissionNum
-    //         .reduce((sum, item) => sum + item.count, 0);
-    // }
     const total = user.submitStatsGlobal?.acSubmissionNum?.find(
       (x) => x.difficulty === "All"
     )?.count;
