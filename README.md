@@ -138,7 +138,11 @@ A comprehensive Chrome extension to track your Data Structures & Algorithms prob
 
 ## License
 
-This project is open source and available under the MIT License.
+This project is open source and available under the [MIT License](LICENSE).  
+© 2025 [Jiya Garg](https://github.com/jiyagarg03) – All rights reserved.
+
+Please retain proper attribution when using or modifying this code. Contributions are welcome with credit.
+
 
 ## Support
 
